@@ -1,0 +1,16 @@
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\InterfazUsuario.exe.config
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\InterfazUsuario.exe
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\InterfazUsuario.pdb
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.csprojResolveAssemblyReference.cache
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.GestionAlumnosUI.resources
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.Properties.Resources.resources
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.VentanaPrincipal.resources
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.csproj.GenerateResource.Cache
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.exe
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.pdb
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.GestionDocenteUI.resources
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\obj\Debug\InterfazUsuario.GestionMateriaUI.resources
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\Obligatorio1DA.dll
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\Interfaces.dll
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\Obligatorio1DA.pdb
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\InterfazUsuario\bin\Debug\Interfaces.pdb

@@ -1,0 +1,7 @@
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\bin\Debug\GestionMateria.dll
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\bin\Debug\GestionMateria.pdb
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\obj\Debug\GestionMateria.csprojResolveAssemblyReference.cache
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\obj\Debug\GestionMateria.dll
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\obj\Debug\GestionMateria.pdb
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\bin\Debug\Interfaces.dll
+C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionMateria\bin\Debug\Interfaces.pdb
