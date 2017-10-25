@@ -138,7 +138,15 @@ namespace PruebasUnitarias
         }
         [TestMethod]
 
+        public void ProbarAsignarDocenteAMateria()
+        {
+            Asociacion.AsignarDocenteAMateria(ciDocente, codigoMateria);
+            Materia materia = mantenimientoMateria.obtenerMateriaPorCodigo(codigoMateria);
+            string ciDocenteEncontrado = materia.Docentes.Single(docente => docente == ciDocente);
 
+            Assert.AreEqual(ciDocente, ciDocenteEncontrado);
+        }
+        [TestMethod]
 
         public void GenerarDatos()
         {

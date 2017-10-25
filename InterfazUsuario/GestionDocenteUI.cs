@@ -14,7 +14,7 @@ namespace InterfazUsuario
     public partial class GestionDocenteUI : Form
     {
         MantenimientoDocente mantenimientoDocente = new MantenimientoDocente();
-
+        string ciDocenteSeleccionado;
         public GestionDocenteUI()
         {
             InitializeComponent();
@@ -51,13 +51,23 @@ namespace InterfazUsuario
                 listaDocentes.Items.Add(itemDocente);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listaDocentes_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            ListView.SelectedListViewItemCollection docenteSeleccionado = listaDocentes.SelectedItems;
+            if (docenteSeleccionado.Count > 0)
+            {
+                Console.WriteLine("docente seleccionado count" + docenteSeleccionado.Count);
+                Console.WriteLine("docente seleccionado" + docenteSeleccionado[0].Text);
+
+                Console.WriteLine("APLLIDO seleccionado" + docenteSeleccionado[0].SubItems[1].Text);
+                Console.WriteLine("CI seleccionado" + docenteSeleccionado[0].SubItems[2].Text);
+
+                entradaNombreDocente.Text = docenteSeleccionado[0].SubItems[0].Text;
+                entradaApellidoDocente.Text = docenteSeleccionado[0].SubItems[1].Text;
+                entradaCIDocente.Text = docenteSeleccionado[0].SubItems[2].Text;
+                ciDocenteSeleccionado = docenteSeleccionado[0].SubItems[2].Text;
+            }
 
         }
 
@@ -67,6 +77,22 @@ namespace InterfazUsuario
             string apellido = entradaApellidoDocente.Text;
             string ci = entradaCIDocente.Text;
             mantenimientoDocente.AltaDatosDocente(nombre, apellido, ci, new List<string>());
+            cargarListaDocente();
+        }
+
+        private void botonModificarDocente_Click(object sender, EventArgs e)
+        {
+            Docente docenteModificado = new Docente();
+            docenteModificado.Nombre = entradaNombreDocente.Text;
+            docenteModificado.Apellido = entradaApellidoDocente.Text;
+            docenteModificado.Ci = entradaCIDocente.Text;
+            mantenimientoDocente.ModificarDocente(ciDocenteSeleccionado, docenteModificado);
+            cargarListaDocente();
+        }
+
+        private void botonBajarDocente_Click(object sender, EventArgs e)
+        {
+            mantenimientoDocente.BajaDocente(ciDocenteSeleccionado);
             cargarListaDocente();
         }
     }

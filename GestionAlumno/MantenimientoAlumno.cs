@@ -15,6 +15,7 @@ namespace GestionAlumno
         public object Menu { get; set; }
         public IList Acciones { get; set; }
         private List<Alumno> alumnos = new List<Alumno>();
+        public List<Alumno> alumnosPrueba = new List<Alumno>();
         public List<Alumno> GetAlumnos()
         {
             return alumnos;
@@ -75,6 +76,16 @@ namespace GestionAlumno
             {
                 Console.WriteLine("Excepcion al filtrar alumno > " + e.ToString());
             }
+        }
+        public void GenerarDatos()
+        {
+            // Agrego Docentes con AltaDatosDocente para tener una lista
+            alumnosPrueba.Add(AltaDatosAlumno("Juan Pablo", "Perez", "111", new List<string>()));
+            alumnosPrueba.Add(AltaDatosAlumno("Pedro", "Malan", "1231", new List<string>()));
+            alumnosPrueba.Add(AltaDatosAlumno("Horacio", "Gabriel", "1234", new List<string>()));
+            alumnosPrueba.Add(AltaDatosAlumno("Alejandro", "Gonzalez", "333", new List<string>()));
+
+            alumnos = GetAlumnos();
         }
     }
 }
