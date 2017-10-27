@@ -5,3 +5,12 @@ C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\Obligatorio1DA\obj\Debug
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\Obligatorio1DA\obj\Debug\Obligatorio1DA.pdb
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\Obligatorio1DA\bin\Debug\Interfaces.dll
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\Obligatorio1DA\bin\Debug\Interfaces.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\obj\Debug\GestionDocente.csprojResolveAssemblyReference.cache
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\obj\Debug\Obligatorio1DA.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\obj\Debug\Obligatorio1DA.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\Obligatorio1DA.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\Obligatorio1DA.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\GestionMateria.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\Interfaces.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\GestionMateria.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\Obligatorio1DA\bin\Debug\Interfaces.pdb

@@ -1,4 +1,5 @@
 ﻿using GestionDocente;
+using GestionMateria;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace InterfazUsuario
     {
         MantenimientoDocente mantenimientoDocente = new MantenimientoDocente();
         string ciDocenteSeleccionado;
+        MantenimientoMateria mantenimientoMateria = new MantenimientoMateria();
         public GestionDocenteUI()
         {
             InitializeComponent();
@@ -53,7 +55,7 @@ namespace InterfazUsuario
         }
         private void listaDocentes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            List<Materia> materiasDelDocente = new List<Materia>();
             ListView.SelectedListViewItemCollection docenteSeleccionado = listaDocentes.SelectedItems;
             if (docenteSeleccionado.Count > 0)
             {
@@ -67,8 +69,12 @@ namespace InterfazUsuario
                 entradaApellidoDocente.Text = docenteSeleccionado[0].SubItems[1].Text;
                 entradaCIDocente.Text = docenteSeleccionado[0].SubItems[2].Text;
                 ciDocenteSeleccionado = docenteSeleccionado[0].SubItems[2].Text;
+                materiasDelDocente = mantenimientoMateria.ObtenerMateriasPorDocente(ciDocenteSeleccionado);
+                foreach (Materia materia in materiasDelDocente)
+                {
+                    listaMaterias.Items.Add(materia);
+                }
             }
-
         }
 
         private void botonAltaDocente_Click(object sender, EventArgs e)
@@ -94,6 +100,12 @@ namespace InterfazUsuario
         {
             mantenimientoDocente.BajaDocente(ciDocenteSeleccionado);
             cargarListaDocente();
+        }
+
+        private void listaMaterias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
         }
     }
  }

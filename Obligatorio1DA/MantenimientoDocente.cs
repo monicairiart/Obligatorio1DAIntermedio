@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Interfaces;
 using System.Collections;
+using GestionMateria;
 
 namespace GestionDocente 
 {
@@ -33,6 +34,11 @@ namespace GestionDocente
             docente.Apellido = apellidoDocente;
             docente.Ci = ciDocente;
             docente.Materias = materias;
+            MantenimientoMateria mantenimientoMateria = new MantenimientoMateria();
+            foreach (string codigoMateria in materias)
+            {
+                AsignacionMateria.AsignarDocenteAMateria(mantenimientoMateria.GetMaterias(), ciDocente, codigoMateria);
+            }
             docentes.Add(docente);
             return docente;
         }
@@ -79,9 +85,13 @@ namespace GestionDocente
         }
         public void GenerarDatos()
         {
+            List<string> materiasAAsignar = new List<string>();
+            materiasAAsignar.Add("111");
+            materiasAAsignar.Add("1234");
+
             // Agrego Docentes con AltaDatosDocente para tener una lista
-            docentesPrueba.Add(AltaDatosDocente("Juan Pablo", "Perez", "111", new List<string>()));
-            docentesPrueba.Add(AltaDatosDocente("Pedro", "Malan", "1231", new List<string>()));
+            docentesPrueba.Add(AltaDatosDocente("Juan Pablo", "Perez", "111", materiasAAsignar));
+            docentesPrueba.Add(AltaDatosDocente("Pedro", "Malan", "1231", materiasAAsignar));
             docentesPrueba.Add(AltaDatosDocente("Horacio", "Gabriel", "1234", new List<string>()));
             docentesPrueba.Add(AltaDatosDocente("Alejandro", "Gonzalez", "333", new List<string>()));
 

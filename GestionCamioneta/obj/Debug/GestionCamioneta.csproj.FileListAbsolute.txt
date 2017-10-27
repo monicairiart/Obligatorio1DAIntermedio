@@ -5,3 +5,10 @@ C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionCamioneta\obj\Deb
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionCamioneta\obj\Debug\GestionCamioneta.csprojResolveAssemblyReference.cache
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionCamioneta\bin\Debug\Interfaces.dll
 C:\Users\Monica\Documents\Obligatorio1DA\Obligatorio1DA\GestionCamioneta\bin\Debug\Interfaces.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\bin\Debug\GestionCamioneta.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\bin\Debug\GestionCamioneta.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\bin\Debug\Interfaces.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\bin\Debug\Interfaces.pdb
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\obj\Debug\GestionCamioneta.csprojResolveAssemblyReference.cache
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\obj\Debug\GestionCamioneta.dll
+C:\Users\Monica\Documents\Obligatorio1DAintermedio\GestionCamioneta\obj\Debug\GestionCamioneta.pdb

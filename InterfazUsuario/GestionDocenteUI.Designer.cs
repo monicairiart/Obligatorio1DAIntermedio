@@ -42,6 +42,8 @@ namespace InterfazUsuario
             this.tituloApellidoDocente = new System.Windows.Forms.Label();
             this.tituloCIDocente = new System.Windows.Forms.Label();
             this.panelVentanaDocente = new System.Windows.Forms.Panel();
+            this.listaMaterias = new System.Windows.Forms.ListBox();
+            this.tituloListaMaterias = new System.Windows.Forms.Label();
             this.panelVentanaDocente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,30 +96,30 @@ namespace InterfazUsuario
             // 
             // listaDocentes
             // 
-            this.listaDocentes.Location = new System.Drawing.Point(56, 84);
+            this.listaDocentes.Location = new System.Drawing.Point(19, 77);
             this.listaDocentes.Name = "listaDocentes";
-            this.listaDocentes.Size = new System.Drawing.Size(349, 177);
+            this.listaDocentes.Size = new System.Drawing.Size(319, 185);
             this.listaDocentes.TabIndex = 0;
             this.listaDocentes.UseCompatibleStateImageBehavior = false;
             this.listaDocentes.SelectedIndexChanged += new System.EventHandler(this.listaDocentes_SelectedIndexChanged);
             // 
             // entradaNombreDocente
             // 
-            this.entradaNombreDocente.Location = new System.Drawing.Point(56, 48);
+            this.entradaNombreDocente.Location = new System.Drawing.Point(19, 48);
             this.entradaNombreDocente.Name = "entradaNombreDocente";
             this.entradaNombreDocente.Size = new System.Drawing.Size(100, 20);
             this.entradaNombreDocente.TabIndex = 1;
             // 
             // entradaApellidoDocente
             // 
-            this.entradaApellidoDocente.Location = new System.Drawing.Point(186, 48);
+            this.entradaApellidoDocente.Location = new System.Drawing.Point(125, 48);
             this.entradaApellidoDocente.Name = "entradaApellidoDocente";
             this.entradaApellidoDocente.Size = new System.Drawing.Size(100, 20);
             this.entradaApellidoDocente.TabIndex = 2;
             // 
             // entradaCIDocente
             // 
-            this.entradaCIDocente.Location = new System.Drawing.Point(332, 50);
+            this.entradaCIDocente.Location = new System.Drawing.Point(231, 48);
             this.entradaCIDocente.Name = "entradaCIDocente";
             this.entradaCIDocente.Size = new System.Drawing.Size(100, 20);
             this.entradaCIDocente.TabIndex = 3;
@@ -125,7 +127,7 @@ namespace InterfazUsuario
             // tituloNombreDocente
             // 
             this.tituloNombreDocente.AutoSize = true;
-            this.tituloNombreDocente.Location = new System.Drawing.Point(56, 19);
+            this.tituloNombreDocente.Location = new System.Drawing.Point(16, 18);
             this.tituloNombreDocente.Name = "tituloNombreDocente";
             this.tituloNombreDocente.Size = new System.Drawing.Size(44, 13);
             this.tituloNombreDocente.TabIndex = 4;
@@ -134,7 +136,7 @@ namespace InterfazUsuario
             // tituloApellidoDocente
             // 
             this.tituloApellidoDocente.AutoSize = true;
-            this.tituloApellidoDocente.Location = new System.Drawing.Point(186, 18);
+            this.tituloApellidoDocente.Location = new System.Drawing.Point(131, 19);
             this.tituloApellidoDocente.Name = "tituloApellidoDocente";
             this.tituloApellidoDocente.Size = new System.Drawing.Size(44, 13);
             this.tituloApellidoDocente.TabIndex = 5;
@@ -143,7 +145,7 @@ namespace InterfazUsuario
             // tituloCIDocente
             // 
             this.tituloCIDocente.AutoSize = true;
-            this.tituloCIDocente.Location = new System.Drawing.Point(332, 18);
+            this.tituloCIDocente.Location = new System.Drawing.Point(251, 18);
             this.tituloCIDocente.Name = "tituloCIDocente";
             this.tituloCIDocente.Size = new System.Drawing.Size(87, 13);
             this.tituloCIDocente.TabIndex = 6;
@@ -151,6 +153,8 @@ namespace InterfazUsuario
             // 
             // panelVentanaDocente
             // 
+            this.panelVentanaDocente.Controls.Add(this.tituloListaMaterias);
+            this.panelVentanaDocente.Controls.Add(this.listaMaterias);
             this.panelVentanaDocente.Controls.Add(this.tituloCIDocente);
             this.panelVentanaDocente.Controls.Add(this.tituloApellidoDocente);
             this.panelVentanaDocente.Controls.Add(this.tituloNombreDocente);
@@ -160,15 +164,33 @@ namespace InterfazUsuario
             this.panelVentanaDocente.Controls.Add(this.listaDocentes);
             this.panelVentanaDocente.Location = new System.Drawing.Point(45, 61);
             this.panelVentanaDocente.Name = "panelVentanaDocente";
-            this.panelVentanaDocente.Size = new System.Drawing.Size(475, 313);
+            this.panelVentanaDocente.Size = new System.Drawing.Size(510, 313);
             this.panelVentanaDocente.TabIndex = 24;
+            // 
+            // listaMaterias
+            // 
+            this.listaMaterias.FormattingEnabled = true;
+            this.listaMaterias.Location = new System.Drawing.Point(374, 77);
+            this.listaMaterias.Name = "listaMaterias";
+            this.listaMaterias.Size = new System.Drawing.Size(120, 186);
+            this.listaMaterias.TabIndex = 7;
+            this.listaMaterias.SelectedIndexChanged += new System.EventHandler(this.listaMaterias_SelectedIndexChanged);
+            // 
+            // tituloListaMaterias
+            // 
+            this.tituloListaMaterias.AutoSize = true;
+            this.tituloListaMaterias.Location = new System.Drawing.Point(374, 48);
+            this.tituloListaMaterias.Name = "tituloListaMaterias";
+            this.tituloListaMaterias.Size = new System.Drawing.Size(99, 13);
+            this.tituloListaMaterias.TabIndex = 8;
+            this.tituloListaMaterias.Text = "Materias Asignadas";
             // 
             // GestionDocenteUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(648, 305);
+            this.ClientSize = new System.Drawing.Size(648, 375);
             this.Controls.Add(this.botonModificarDocente);
             this.Controls.Add(this.botonBajarDocente);
             this.Controls.Add(this.panelVentanaDocente);
@@ -199,5 +221,7 @@ namespace InterfazUsuario
         private System.Windows.Forms.Label tituloApellidoDocente;
         private System.Windows.Forms.Label tituloCIDocente;
         private System.Windows.Forms.Panel panelVentanaDocente;
+        private System.Windows.Forms.Label tituloListaMaterias;
+        private System.Windows.Forms.ListBox listaMaterias;
     }
 }

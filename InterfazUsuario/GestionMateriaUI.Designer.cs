@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tituloDocente = new System.Windows.Forms.Label();
             this.tituloMantenimientoMateria = new System.Windows.Forms.Label();
-            this.tituloNombreMateria = new System.Windows.Forms.Label();
-            this.tituloCodigoMateria = new System.Windows.Forms.Label();
-            this.botonSalir = new System.Windows.Forms.Button();
             this.botonModificarMateria = new System.Windows.Forms.Button();
-            this.botonBajaMateria = new System.Windows.Forms.Button();
+            this.botonBajarMateria = new System.Windows.Forms.Button();
+            this.panelVentanaMateria = new System.Windows.Forms.Panel();
+            this.tituloCodigoMateria = new System.Windows.Forms.Label();
+            this.tituloNombreMateria = new System.Windows.Forms.Label();
+            this.entradaNombreMateria = new System.Windows.Forms.TextBox();
+            this.listaMaterias = new System.Windows.Forms.ListView();
+            this.botonSalir = new System.Windows.Forms.Button();
             this.botonAltaMateria = new System.Windows.Forms.Button();
+            this.entradaCodigoMateria = new System.Windows.Forms.TextBox();
+            this.panelVentanaMateria.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tituloDocente
-            // 
-            this.tituloDocente.AutoSize = true;
-            this.tituloDocente.Location = new System.Drawing.Point(106, 173);
-            this.tituloDocente.Name = "tituloDocente";
-            this.tituloDocente.Size = new System.Drawing.Size(51, 13);
-            this.tituloDocente.TabIndex = 24;
-            this.tituloDocente.Text = "Docente:";
             // 
             // tituloMantenimientoMateria
             // 
@@ -58,60 +53,97 @@
             this.tituloMantenimientoMateria.Text = "Mantenimiento de Materias";
             this.tituloMantenimientoMateria.Click += new System.EventHandler(this.tituloMantenimientoAlumnos_Click);
             // 
-            // tituloNombreMateria
+            // botonModificarMateria
             // 
-            this.tituloNombreMateria.AutoSize = true;
-            this.tituloNombreMateria.Location = new System.Drawing.Point(103, 93);
-            this.tituloNombreMateria.Name = "tituloNombreMateria";
-            this.tituloNombreMateria.Size = new System.Drawing.Size(50, 13);
-            this.tituloNombreMateria.TabIndex = 20;
-            this.tituloNombreMateria.Text = "Nombre: ";
+            this.botonModificarMateria.Location = new System.Drawing.Point(556, 141);
+            this.botonModificarMateria.Name = "botonModificarMateria";
+            this.botonModificarMateria.Size = new System.Drawing.Size(75, 23);
+            this.botonModificarMateria.TabIndex = 31;
+            this.botonModificarMateria.Text = "Modificar";
+            this.botonModificarMateria.UseVisualStyleBackColor = true;
+            this.botonModificarMateria.Click += new System.EventHandler(this.botonModificarMateria_Click);
+            // 
+            // botonBajarMateria
+            // 
+            this.botonBajarMateria.Location = new System.Drawing.Point(556, 112);
+            this.botonBajarMateria.Name = "botonBajarMateria";
+            this.botonBajarMateria.Size = new System.Drawing.Size(75, 23);
+            this.botonBajarMateria.TabIndex = 30;
+            this.botonBajarMateria.Text = "Bajar";
+            this.botonBajarMateria.UseVisualStyleBackColor = true;
+            this.botonBajarMateria.Click += new System.EventHandler(this.botonBajarMateria_Click);
+            // 
+            // panelVentanaMateria
+            // 
+            this.panelVentanaMateria.Controls.Add(this.tituloCodigoMateria);
+            this.panelVentanaMateria.Controls.Add(this.tituloNombreMateria);
+            this.panelVentanaMateria.Controls.Add(this.entradaCodigoMateria);
+            this.panelVentanaMateria.Controls.Add(this.entradaNombreMateria);
+            this.panelVentanaMateria.Controls.Add(this.listaMaterias);
+            this.panelVentanaMateria.Location = new System.Drawing.Point(40, 64);
+            this.panelVentanaMateria.Name = "panelVentanaMateria";
+            this.panelVentanaMateria.Size = new System.Drawing.Size(475, 313);
+            this.panelVentanaMateria.TabIndex = 29;
             // 
             // tituloCodigoMateria
             // 
             this.tituloCodigoMateria.AutoSize = true;
-            this.tituloCodigoMateria.Location = new System.Drawing.Point(103, 66);
+            this.tituloCodigoMateria.Location = new System.Drawing.Point(53, 18);
             this.tituloCodigoMateria.Name = "tituloCodigoMateria";
-            this.tituloCodigoMateria.Size = new System.Drawing.Size(99, 13);
-            this.tituloCodigoMateria.TabIndex = 19;
-            this.tituloCodigoMateria.Text = "Código de Materia: ";
+            this.tituloCodigoMateria.Size = new System.Drawing.Size(78, 13);
+            this.tituloCodigoMateria.TabIndex = 6;
+            this.tituloCodigoMateria.Text = "Código Materia";
+            // 
+            // tituloNombreMateria
+            // 
+            this.tituloNombreMateria.AutoSize = true;
+            this.tituloNombreMateria.Location = new System.Drawing.Point(186, 18);
+            this.tituloNombreMateria.Name = "tituloNombreMateria";
+            this.tituloNombreMateria.Size = new System.Drawing.Size(44, 13);
+            this.tituloNombreMateria.TabIndex = 4;
+            this.tituloNombreMateria.Text = "Nombre";
+            // 
+            // entradaNombreMateria
+            // 
+            this.entradaNombreMateria.Location = new System.Drawing.Point(189, 48);
+            this.entradaNombreMateria.Name = "entradaNombreMateria";
+            this.entradaNombreMateria.Size = new System.Drawing.Size(100, 20);
+            this.entradaNombreMateria.TabIndex = 1;
+            // 
+            // listaMaterias
+            // 
+            this.listaMaterias.Location = new System.Drawing.Point(56, 84);
+            this.listaMaterias.Name = "listaMaterias";
+            this.listaMaterias.Size = new System.Drawing.Size(349, 177);
+            this.listaMaterias.TabIndex = 0;
+            this.listaMaterias.UseCompatibleStateImageBehavior = false;
+            this.listaMaterias.SelectedIndexChanged += new System.EventHandler(this.listaMaterias_SelectedIndexChanged);
             // 
             // botonSalir
             // 
-            this.botonSalir.Location = new System.Drawing.Point(470, 269);
+            this.botonSalir.Location = new System.Drawing.Point(556, 225);
             this.botonSalir.Name = "botonSalir";
             this.botonSalir.Size = new System.Drawing.Size(75, 23);
-            this.botonSalir.TabIndex = 18;
+            this.botonSalir.TabIndex = 28;
             this.botonSalir.Text = "Salir";
             this.botonSalir.UseVisualStyleBackColor = true;
             // 
-            // botonModificarMateria
-            // 
-            this.botonModificarMateria.Location = new System.Drawing.Point(356, 269);
-            this.botonModificarMateria.Name = "botonModificarMateria";
-            this.botonModificarMateria.Size = new System.Drawing.Size(75, 23);
-            this.botonModificarMateria.TabIndex = 17;
-            this.botonModificarMateria.Text = "Modificación";
-            this.botonModificarMateria.UseVisualStyleBackColor = true;
-            // 
-            // botonBajaMateria
-            // 
-            this.botonBajaMateria.Location = new System.Drawing.Point(275, 269);
-            this.botonBajaMateria.Name = "botonBajaMateria";
-            this.botonBajaMateria.Size = new System.Drawing.Size(75, 23);
-            this.botonBajaMateria.TabIndex = 16;
-            this.botonBajaMateria.Text = "Baja";
-            this.botonBajaMateria.UseVisualStyleBackColor = true;
-            // 
             // botonAltaMateria
             // 
-            this.botonAltaMateria.Location = new System.Drawing.Point(194, 269);
+            this.botonAltaMateria.Location = new System.Drawing.Point(556, 83);
             this.botonAltaMateria.Name = "botonAltaMateria";
             this.botonAltaMateria.Size = new System.Drawing.Size(75, 23);
-            this.botonAltaMateria.TabIndex = 15;
-            this.botonAltaMateria.Text = "Alta";
+            this.botonAltaMateria.TabIndex = 27;
+            this.botonAltaMateria.Text = "Agregar";
             this.botonAltaMateria.UseVisualStyleBackColor = true;
-            this.botonAltaMateria.Click += new System.EventHandler(this.botonAltaAlumno_Click);
+            this.botonAltaMateria.Click += new System.EventHandler(this.botonAltaMateria_Click);
+            // 
+            // entradaCodigoMateria
+            // 
+            this.entradaCodigoMateria.Location = new System.Drawing.Point(56, 50);
+            this.entradaCodigoMateria.Name = "entradaCodigoMateria";
+            this.entradaCodigoMateria.Size = new System.Drawing.Size(100, 20);
+            this.entradaCodigoMateria.TabIndex = 3;
             // 
             // GestionMateriaUI
             // 
@@ -119,30 +151,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(648, 305);
-            this.Controls.Add(this.tituloDocente);
-            this.Controls.Add(this.tituloMantenimientoMateria);
-            this.Controls.Add(this.tituloNombreMateria);
-            this.Controls.Add(this.tituloCodigoMateria);
-            this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonModificarMateria);
-            this.Controls.Add(this.botonBajaMateria);
+            this.Controls.Add(this.botonBajarMateria);
+            this.Controls.Add(this.panelVentanaMateria);
+            this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonAltaMateria);
+            this.Controls.Add(this.tituloMantenimientoMateria);
             this.Name = "GestionMateriaUI";
             this.Text = "GestionMateria";
+            this.Load += new System.EventHandler(this.GestionMateriaUI_Load);
+            this.panelVentanaMateria.ResumeLayout(false);
+            this.panelVentanaMateria.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label tituloDocente;
         private System.Windows.Forms.Label tituloMantenimientoMateria;
-        private System.Windows.Forms.Label tituloNombreMateria;
-        private System.Windows.Forms.Label tituloCodigoMateria;
-        private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Button botonModificarMateria;
-        private System.Windows.Forms.Button botonBajaMateria;
+        private System.Windows.Forms.Button botonBajarMateria;
+        private System.Windows.Forms.Panel panelVentanaMateria;
+        private System.Windows.Forms.Label tituloCodigoMateria;
+        private System.Windows.Forms.Label tituloNombreMateria;
+        private System.Windows.Forms.TextBox entradaCodigoMateria;
+        private System.Windows.Forms.TextBox entradaNombreMateria;
+        private System.Windows.Forms.ListView listaMaterias;
+        private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Button botonAltaMateria;
     }
 }
