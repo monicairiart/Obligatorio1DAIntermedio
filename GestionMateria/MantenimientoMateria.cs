@@ -15,7 +15,7 @@ namespace GestionMateria
         public string Descripcion { get; set; }
         public object Menu { get; set; }
         public IList Acciones { get; set; }
-        private List<Materia> materias = new List<Materia>();
+        private static List<Materia> materias = new List<Materia>();
         public List<Materia> materiasPrueba = new List<Materia>();
         private string ciDocenteAFiltrar;
         private string ciAlumnoAFiltrar;
@@ -96,12 +96,16 @@ namespace GestionMateria
         }
         public List<Materia> ObtenerMateriasPorDocente(string ciDocente)
         {
+            Console.WriteLine("ci docente de obtener materias xdoc " + ciDocente);
             ciDocenteAFiltrar = ciDocente;
+            Console.WriteLine("cantidad materias " + materias.Count);
             List<Materia> materiasARetornar = materias.FindAll(BuscarMateriaPorDocente);
+            
             return materiasARetornar;
         }
         private Boolean ExisteDocente(string ciDocente)
         {
+            Console.WriteLine("ci docente existe " + ciDocente);
             return ciDocente == ciDocenteAFiltrar;
         }
         private Boolean BuscarMateriaPorDocente(Materia materia)
@@ -117,6 +121,8 @@ namespace GestionMateria
             materiasPrueba.Add(AltaDatosMateria("Logica", "333", new List<string>(), new List<string>()));
 
             materias = GetMaterias();
+            materias = AsignacionMateria.AsignarDocenteAMateria(materias, "111", "111");
+
         }
 
     }

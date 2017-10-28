@@ -51,7 +51,7 @@ namespace InterfazUsuario
             this.tituloMantenimientosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tituloMantenimientosAlumnos.Location = new System.Drawing.Point(185, 9);
             this.tituloMantenimientosAlumnos.Name = "tituloMantenimientosAlumnos";
-            this.tituloMantenimientosAlumnos.Size = new System.Drawing.Size(308, 26);
+            this.tituloMantenimientosAlumnos.Size = new System.Drawing.Size(301, 26);
             this.tituloMantenimientosAlumnos.TabIndex = 23;
             this.tituloMantenimientosAlumnos.Text = "Mantenimiento de Alumnos";
             // 
@@ -72,6 +72,7 @@ namespace InterfazUsuario
             this.botonModificarAlumno.TabIndex = 26;
             this.botonModificarAlumno.Text = "Modificar";
             this.botonModificarAlumno.UseVisualStyleBackColor = true;
+            this.botonModificarAlumno.Click += new System.EventHandler(this.botonModificarAlumno_Click);
             // 
             // botonBajarAlumno
             // 
@@ -81,6 +82,7 @@ namespace InterfazUsuario
             this.botonBajarAlumno.TabIndex = 25;
             this.botonBajarAlumno.Text = "Bajar";
             this.botonBajarAlumno.UseVisualStyleBackColor = true;
+            this.botonBajarAlumno.Click += new System.EventHandler(this.botonBajarAlumno_Click);
             // 
             // botonAltaAlumno
             // 

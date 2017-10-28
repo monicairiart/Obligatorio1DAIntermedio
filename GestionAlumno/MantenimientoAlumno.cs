@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Interfaces;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace GestionAlumno
 {
@@ -28,26 +29,28 @@ namespace GestionAlumno
         }
         public Alumno AltaDatosAlumno(string nombreAlumno, string apellidoAlumno, string ciAlumno, List<string> materias)
         {
-            Alumno alumno = new Alumno();
-            alumno.Nombre = nombreAlumno;
-            alumno.Apellido = apellidoAlumno;
-            alumno.Ci = ciAlumno;
-            alumno.Materias = materias;
-            alumnos.Add(alumno);
-            return alumno;
+            Boolean alumnoExistente = alumnos.Exists(alumnoEncontrado => alumnoEncontrado.Ci == ciAlumno);
+            if (! alumnoExistente)
+            {
+                Alumno alumno = new Alumno();
+                alumno.Nombre = nombreAlumno;
+                alumno.Apellido = apellidoAlumno;
+                alumno.Ci = ciAlumno;
+                alumno.Materias = materias;
+                alumnos.Add(alumno);
+                return alumno;
+            }
+            return new Alumno();
         }
 
         public void BajaAlumno(string ci)
         {
-            Console.WriteLine("Cedula de Identidad a Baja de Alumno > " + ci);
-
             try
             {
                 // Filtro los docentes por la ci que recibo por parametro
                 // Single es un metodo iterativo que recibe una funcion anonima por cada
                 // elemento de la lista y retorna el elemento que cumpla con el filtro
                 Alumno alumnoAEliminar = alumnos.Single(alumno => alumno.Ci == ci);
-
                 // Removemos el docenteAEliminar de la lista de docentes
                 alumnos.Remove(alumnoAEliminar);
             }
@@ -70,13 +73,13 @@ namespace GestionAlumno
                 alumnos[indiceDelAlumnoAModificar].Ci = nuevosValores.Ci != "" ? nuevosValores.Ci : alumnoAModificar.Ci;
 
                 alumnos[indiceDelAlumnoAModificar].Materias = nuevosValores.Materias[0] != "" ? nuevosValores.Materias : alumnoAModificar.Materias;
-
             }
             catch (Exception e)
             {
                 Console.WriteLine("Excepcion al filtrar alumno > " + e.ToString());
             }
         }
+        
         public void GenerarDatos()
         {
             // Agrego Docentes con AltaDatosDocente para tener una lista

@@ -14,6 +14,6 @@ namespace Interfaces
         string Descripcion { get; set; }
         object Menu { get; set; }
         IList Acciones { get; set; }
-
+        //Boolean Alta();
     }
 }

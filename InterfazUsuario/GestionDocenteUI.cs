@@ -25,6 +25,7 @@ namespace InterfazUsuario
         private void GestionDocenteUI_Load(object sender, EventArgs e)
         {
             mantenimientoDocente.GenerarDatos();
+            mantenimientoMateria.GenerarDatos();
             //Console.WriteLine("count docentes " + mantenimientoDocente.GetDocentes().Count());
             listaDocentes.Columns.Add("Nombre");
             listaDocentes.Columns.Add("Apellido");
@@ -65,11 +66,12 @@ namespace InterfazUsuario
                 Console.WriteLine("APLLIDO seleccionado" + docenteSeleccionado[0].SubItems[1].Text);
                 Console.WriteLine("CI seleccionado" + docenteSeleccionado[0].SubItems[2].Text);
 
-                entradaNombreDocente.Text = docenteSeleccionado[0].SubItems[0].Text;
-                entradaApellidoDocente.Text = docenteSeleccionado[0].SubItems[1].Text;
-                entradaCIDocente.Text = docenteSeleccionado[0].SubItems[2].Text;
-                ciDocenteSeleccionado = docenteSeleccionado[0].SubItems[2].Text;
+                entradaNombreDocente.Text = docenteSeleccionado[0].SubItems[1].Text;
+                entradaApellidoDocente.Text = docenteSeleccionado[0].SubItems[2].Text;
+                entradaCIDocente.Text = docenteSeleccionado[0].SubItems[0].Text;
+                ciDocenteSeleccionado = docenteSeleccionado[0].SubItems[0].Text;
                 materiasDelDocente = mantenimientoMateria.ObtenerMateriasPorDocente(ciDocenteSeleccionado);
+                Console.WriteLine("Materias del docente " + materiasDelDocente.Count);
                 foreach (Materia materia in materiasDelDocente)
                 {
                     listaMaterias.Items.Add(materia);

@@ -10,8 +10,13 @@ namespace GestionMateria
     {
         public static List<Materia> AsignarDocenteAMateria(List<Materia> materias, string ciDocente, string codigoMateria)
         {
+            Console.WriteLine("cantidad materias en asignardocentemateria " + materias.Count);
+
             foreach (Materia materia in materias)
             {
+                Console.WriteLine("entra for each asigna docentemat " + (materia.CodigoMateria == codigoMateria));
+                Console.WriteLine("materia: " + materia.Nombre + materia.CodigoMateria);
+
                 if (materia.CodigoMateria == codigoMateria)
                 {
                     materia.Docentes.Add(ciDocente);
@@ -22,8 +27,11 @@ namespace GestionMateria
         }
         public static List<Materia> AsignarAlumnoAMateria(List<Materia> materias, string ciAlumno, string codigoMateria)
         {
+            Console.WriteLine("cantidad materias en asignaralumnomateria " + materias.Count);
             foreach (Materia materia in materias)
             {
+                Console.WriteLine("entra for each asignar alumnmat " + (materia.CodigoMateria == codigoMateria));
+                Console.WriteLine("materia: " + materia.Nombre + materia.CodigoMateria);
                 if (materia.CodigoMateria == codigoMateria)
                 {
                     materia.Alumnos.Add(ciAlumno);

@@ -15,7 +15,7 @@ namespace PruebasUnitarias
         public PruebasMateria()
         {
             mantenimientoMateria = new MantenimientoMateria();
-            GenerarDatos();
+            //GenerarDatos();
         }
         [TestMethod]
         public void ProbarTipoModuloGestionMateria()
@@ -34,7 +34,7 @@ namespace PruebasUnitarias
             MantenimientoMateria Materia = new GestionMateria.MantenimientoMateria();
             List<string> docentes = new List<string>();
             List<string> alumnos = new List<string>();
-            Materia materia = mantenimientoMateria.AltaDatosMateria("11", "Nombre de la Materia", docentes, alumnos);
+            Materia materia = mantenimientoMateria.AltaDatosMateria("9911", "Nombre de la Materia", docentes, alumnos);
             Assert.IsInstanceOfType(materia, typeof(Materia));
         }
         [TestMethod]
@@ -42,7 +42,7 @@ namespace PruebasUnitarias
         {
             List<string> docentes = new List<string>();
             List<string> alumnos = new List<string>();
-            Materia materia = mantenimientoMateria.AltaDatosMateria("111", "Nombre de la Materia", docentes, alumnos);
+            Materia materia = mantenimientoMateria.AltaDatosMateria("11881", "Nombre de la Materia", docentes, alumnos);
             Assert.IsInstanceOfType(materia.Nombre, typeof(string));
             Assert.AreNotEqual("Nombre cualquiera", materia.Nombre);
             Assert.AreEqual("Nombre de la Materia", materia.Nombre);
@@ -52,7 +52,7 @@ namespace PruebasUnitarias
         {
             List<string> docentes = new List<string>();
             List<string> alumnos = new List<string>();
-            Materia materia = mantenimientoMateria.AltaDatosMateria("111", "Nombre de la Materia", docentes, alumnos);
+            Materia materia = mantenimientoMateria.AltaDatosMateria("11155", "Nombre de la Materia", docentes, alumnos);
             Assert.IsInstanceOfType(materia.Nombre, typeof(string));
             Assert.AreNotEqual("222", materia.CodigoMateria);
             Assert.AreEqual("111", materia.CodigoMateria);
@@ -63,7 +63,7 @@ namespace PruebasUnitarias
             List<string> docentes = new List<string>();
             List<string> docentesDiferentes = new List<string>();
             List<string> alumnos = new List<string>();
-            Materia materia = mantenimientoMateria.AltaDatosMateria("111","Nombre de la Materia", docentes, alumnos);
+            Materia materia = mantenimientoMateria.AltaDatosMateria("11781","Nombre de la Materia", docentes, alumnos);
             docentes.Add("Diego Medina");
             docentes.Add("Gustavo Laguna");
             docentesDiferentes.Add("Pablo Fernandez");
@@ -79,7 +79,7 @@ namespace PruebasUnitarias
             List<string> docentes = new List<string>();
             List<string> alumnosDiferentes = new List<string>();
             List<string> alumnos = new List<string>();
-            Materia materia = mantenimientoMateria.AltaDatosMateria("111", "Nombre de la Materia", docentes, alumnos);
+            Materia materia = mantenimientoMateria.AltaDatosMateria("14411", "Nombre de la Materia", docentes, alumnos);
             docentes.Add("Diego Medina");
             docentes.Add("Gustavo Laguna");
             alumnos.Add("Julio Sosa");
@@ -93,11 +93,12 @@ namespace PruebasUnitarias
         public void ProbarDatosBajaMateria()
         {
             MantenimientoMateria mantenimientoMateria = new GestionMateria.MantenimientoMateria();
-            List<Materia> misMaterias = new List<Materia>();
+            /*List<Materia> misMaterias = new List<Materia>();
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("111","Matematicas", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("222","Lógica", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("333","Etica", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("444", "Algebra", new List<string>(), new List<string>()));
+            */
             CollectionAssert.AreEqual(misMaterias, mantenimientoMateria.GetMaterias());
             mantenimientoMateria.BajaMateria("111");
             CollectionAssert.AreNotEqual(misMaterias, mantenimientoMateria.GetMaterias());
@@ -107,11 +108,12 @@ namespace PruebasUnitarias
         public void ProbarDatosBajaMateriaNoExiste()
         {
             MantenimientoMateria mantenimientoMateria = new GestionMateria.MantenimientoMateria();
-            List<Materia> misMaterias = new List<Materia>();
+            /*List<Materia> misMaterias = new List<Materia>();
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("111", "Matematicas", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("222", "Lógica", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("333", "Etica", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("444", "Algebra", new List<string>(), new List<string>()));
+            */
             Console.WriteLine("count mis materias " + mantenimientoMateria.GetMaterias().Count);
             CollectionAssert.AreEqual(misMaterias, mantenimientoMateria.GetMaterias());
             mantenimientoMateria.BajaMateria("999");
@@ -140,8 +142,9 @@ namespace PruebasUnitarias
 
         public void ProbarAsignarDocenteAMateria()
         {
+            materias = mantenimientoMateria.GetMaterias();
             string ciDocente = "111";
-            string codigoMateria = "111";
+            string codigoMateria = "14411";
             materias = AsignacionMateria.AsignarDocenteAMateria(materias, ciDocente, codigoMateria);
             Materia materia = mantenimientoMateria.obtenerMateriaPorCodigo(codigoMateria);
             string ciDocenteEncontrado = materia.Docentes.Find(ci => ci == ciDocente);
@@ -151,16 +154,20 @@ namespace PruebasUnitarias
 
         public void ProbarAsignarAlumnoAMateria()
         {
+            materias = mantenimientoMateria.GetMaterias();
             string ciAlumno = "111";
-            string codigoMateria = "111";
+            string codigoMateria = "9911";
+            Console.WriteLine("entra a asignar alumno materia ");
             materias = AsignacionMateria.AsignarAlumnoAMateria(materias, ciAlumno, codigoMateria);
+            Console.WriteLine("cant materias " + materias.Count);
             Materia materia = mantenimientoMateria.obtenerMateriaPorCodigo(codigoMateria);
             string ciAlumnoEncontrado = materia.Alumnos.Find(ci => ci == ciAlumno);
+            Console.WriteLine("alumno de la materia " + materia.Alumnos.ToString());
             Assert.AreEqual(ciAlumno, ciAlumnoEncontrado);
         }
-        [TestMethod]
+       // [TestMethod]
 
-        public void GenerarDatos()
+        /*public void GenerarDatos()
         {
             // Creamos el abmDocente para gestionar docentes
             mantenimientoMateria = new GestionMateria.MantenimientoMateria();
@@ -174,6 +181,6 @@ namespace PruebasUnitarias
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("333", "Etica", new List<string>(), new List<string>()));
             misMaterias.Add(mantenimientoMateria.AltaDatosMateria("444", "Algebra", new List<string>(), new List<string>()));
             materias = mantenimientoMateria.GetMaterias();
-        }
+        } */
     }
 }
